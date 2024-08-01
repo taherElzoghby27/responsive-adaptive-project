@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/task1/view.dart';
+import 'package:responsive_adaptive/task1/mobile_design/view.dart';
+
+import 'task1/desktop_design/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -31,11 +34,11 @@ class View extends StatelessWidget {
           if (constrains.maxWidth <= 500) {
             //return const MobileDesign();
             //return const MobileExpanded();
-            return const Screen();
+            return const ScreenMobile();
           } else {
             //return const DesktopDesign();
             //return const DesktopExpanded();
-            return const DesktopFlexible();
+            return const DesktopDesignView();
           }
         },
       ),
