@@ -9,11 +9,13 @@ class ScreenMobileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.symmetric(
+        horizontal: 8,
+      ),
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child: SizedBox(height: 1),
+            child: SizedBox(height: 10),
           ),
           CustomSliverGrid(),
           CustomSliverList(),
