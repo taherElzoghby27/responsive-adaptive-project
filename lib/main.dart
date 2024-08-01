@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive/task1/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +31,7 @@ class View extends StatelessWidget {
           if (constrains.maxWidth <= 500) {
             //return const MobileDesign();
             //return const MobileExpanded();
-            return const IntrinsicDesign();
+            return const Screen();
           } else {
             //return const DesktopDesign();
             //return const DesktopExpanded();
