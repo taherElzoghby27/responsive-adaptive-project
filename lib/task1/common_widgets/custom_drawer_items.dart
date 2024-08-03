@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class CustomDrawerItems extends StatelessWidget {
@@ -6,7 +5,8 @@ class CustomDrawerItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
+      shrinkWrap: true,
       children: [
         ListTile(
           leading: const Icon(Icons.home),
