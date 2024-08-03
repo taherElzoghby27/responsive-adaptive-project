@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/task1/common_widgets/custom_drawer.dart';
 import 'package:responsive_adaptive/task1/mobile_design/widgets/screen_body.dart';
 
-class ScreenMobile extends StatefulWidget {
-  const ScreenMobile({super.key});
+class Task1 extends StatefulWidget {
+  const Task1({super.key});
 
   @override
-  State<ScreenMobile> createState() => _ScreenMobileState();
+  State<Task1> createState() => _Task1State();
 }
 
-class _ScreenMobileState extends State<ScreenMobile> {
+class _Task1State extends State<Task1> {
   GlobalKey<ScaffoldState> keyScaffold = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {

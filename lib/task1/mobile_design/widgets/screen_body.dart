@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../common_widgets/custom_list.dart';
 import '../../common_widgets/grid_view_widget.dart';
 import '../../common_widgets/list_view_widget.dart';
 
@@ -8,17 +9,27 @@ class ScreenMobileBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(
+    return Padding(
+      padding: const EdgeInsets.symmetric(
         horizontal: 8,
       ),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(height: 10),
           ),
-          CustomSliverGrid(),
-          CustomSliverList(),
+          SliverToBoxAdapter(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                if (constraints.maxWidth > 600) {
+                  return const CustomList();
+                } else {
+                  return const CustomSliverGrid();
+                }
+              },
+            ),
+          ),
+          const CustomSliverList(),
         ],
       ),
     );

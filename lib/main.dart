@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/task1/mobile_design/view.dart';
 
-import 'task1/desktop_design/view.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -28,20 +26,8 @@ class View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: LayoutBuilder(
-        builder: (context, constrains) {
-          if (constrains.maxWidth <= 500) {
-            //return const MobileDesign();
-            //return const MobileExpanded();
-            return const ScreenMobile();
-          } else {
-            //return const DesktopDesign();
-            //return const DesktopExpanded();
-            return const DesktopDesignView();
-          }
-        },
-      ),
+    return const Scaffold(
+      body: Task1(),
     );
   }
 }
