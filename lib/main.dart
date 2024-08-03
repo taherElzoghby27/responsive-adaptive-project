@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/task1/mobile_design/view.dart';
+
+import 'task1/view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,18 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const View(),
-    );
-  }
-}
-
-class View extends StatelessWidget {
-  const View({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Task1(),
+      home: const ScreenView(),
     );
   }
 }
