@@ -10,8 +10,11 @@ class DrawerTile extends StatelessWidget {
       leading: Icon(icon),
       title: FittedBox(
         fit: BoxFit.scaleDown,
-        alignment :Alignment.centerLeft,
-        child: Text(title),
+        alignment: Alignment.centerLeft,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(title),
+        ),
       ),
       onTap: () {},
     );
