@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'drawer_tile.dart';
+
 class CustomDrawerItems extends StatelessWidget {
   const CustomDrawerItems({super.key});
 
@@ -7,26 +9,22 @@ class CustomDrawerItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
-      children: [
-        ListTile(
-          leading: const Icon(Icons.home),
-          title: const Text('D A S H B O A R D'),
-          onTap: () {},
+      children: const [
+        DrawerTile(
+          icon: Icons.home,
+          title: 'D A S H B O A R D',
         ),
-        ListTile(
-          leading: const Icon(Icons.settings),
-          title: const Text('S E T T I N G S'),
-          onTap: () {},
+        DrawerTile(
+          icon: Icons.settings,
+          title: 'S E T T I N G S',
         ),
-        ListTile(
-          leading: const Icon(Icons.info),
-          title: const Text('A B O U T'),
-          onTap: () {},
+        DrawerTile(
+          icon: Icons.info,
+          title: 'A B O U T',
         ),
-        ListTile(
-          leading: const Icon(Icons.logout),
-          title: const Text('L O G O U T'),
-          onTap: () {},
+        DrawerTile(
+          icon: Icons.logout,
+          title: 'L O G O U T',
         ),
       ],
     );
