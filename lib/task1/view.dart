@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/task1/widgets/mobile_body.dart';
 
+import 'widgets/adaptive_layout.dart';
 import 'widgets/custom_drawer.dart';
 import 'widgets/desktop_body.dart';
 import 'widgets/tablet_body.dart';
@@ -21,16 +22,10 @@ class _ScreenViewState extends State<ScreenView> {
       drawer: const CustomDrawer(),
       backgroundColor: Colors.white.withOpacity(.8),
       appBar: buildAppBar(context),
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          if (constraints.maxWidth < 600) {
-            return const ScreenMobileBody();
-          } else if (constraints.maxWidth < 900) {
-            return const TabletBody();
-          } else {
-            return const DesktopBody();
-          }
-        },
+      body: const AdaptiveLayout(
+        mobileLayout: ScreenMobileBody(),
+        desktopLayout: DesktopBody(),
+        tabletLayout: TabletBody(),
       ),
     );
   }
