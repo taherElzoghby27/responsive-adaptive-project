@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/task1/widgets/tablet_layout.dart';
 
+import 'widgets/desktop_layout.dart';
 import 'widgets/mobile_layout.dart';
 
 class ScreenView extends StatelessWidget {
@@ -10,10 +11,12 @@ class ScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth > 600) {
+        if (constraints.maxWidth < 600) {
+          return const MobileLayout();
+        } else if (constraints.maxWidth < 900) {
           return const TabletLayout();
         } else {
-          return const MobileLayout();
+          return const DesktopLayout();
         }
       },
     );
