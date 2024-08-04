@@ -10,6 +10,7 @@ class DrawerTile extends StatelessWidget {
       leading: Icon(icon),
       title: FittedBox(
         fit: BoxFit.scaleDown,
+        alignment :Alignment.centerLeft,
         child: Text(title),
       ),
       onTap: () {},
