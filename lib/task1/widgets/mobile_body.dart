@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'grid_view_widget.dart';
 import 'list_view_widget.dart';
 
-class ScreenMobileBody extends StatelessWidget {
-  const ScreenMobileBody({super.key});
+class MobileBody extends StatelessWidget {
+  const MobileBody({super.key});
 
   @override
   Widget build(BuildContext context) {

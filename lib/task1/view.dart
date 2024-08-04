@@ -22,19 +22,17 @@ class _ScreenViewState extends State<ScreenView> {
       drawer: const CustomDrawer(),
       backgroundColor: Colors.white.withOpacity(.8),
       appBar: buildAppBar(context),
-      body: const AdaptiveLayout(
-        mobileLayout: ScreenMobileBody(),
-        desktopLayout: DesktopBody(),
-        tabletLayout: TabletBody(),
+      body: AdaptiveLayout(
+        mobileLayout: (context) => const MobileBody(),
+        desktopLayout: (context) => const DesktopBody(),
+        tabletLayout: (context) => const TabletBody(),
       ),
     );
   }
 
   AppBar buildAppBar(BuildContext context) {
     return MediaQuery.sizeOf(context).width > 900
-        ? AppBar(
-            backgroundColor: Colors.black,
-          )
+        ? AppBar(backgroundColor: Colors.black)
         : AppBar(
             backgroundColor: Colors.black,
             leading: IconButton(
