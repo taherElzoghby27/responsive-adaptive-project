@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'responsive_text/screen_text.dart';
-import 'task1/view.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() => runApp(
