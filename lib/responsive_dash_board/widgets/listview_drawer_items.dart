@@ -27,7 +27,6 @@ class _ListViewDrawerItemsState extends State<ListViewDrawerItems> {
         onTap: () {
           if (indexItem != index) {
             setState(() => indexItem = index);
-            debugPrint(indexItem.toString());
           }
         },
         child: indexItem == index
