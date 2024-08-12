@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 
 import '../models/drawer_item_model.dart';
 
-class TileListInfoWidget extends StatelessWidget {
-  const TileListInfoWidget({
+class InActiveTileListInfoWidget extends StatelessWidget {
+  const InActiveTileListInfoWidget({
     super.key,
     required this.drawerItemModel,
   });
