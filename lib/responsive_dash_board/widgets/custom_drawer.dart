@@ -9,14 +9,14 @@ import 'listview_drawer_items.dart';
 
 class CustomDrawerDashBoard extends StatelessWidget {
   const CustomDrawerDashBoard({super.key});
-  static List<DrawerItemModel> items = [
+  static final List<DrawerItemModel> items = [
     DrawerItemModel(image: Assets.imagesDashboard, title: "Dashboard"),
     DrawerItemModel(image: Assets.imagesMyTransctions, title: "My Transaction"),
     DrawerItemModel(image: Assets.imagesStatistics, title: "Statistics"),
     DrawerItemModel(image: Assets.imagesWalletAccount, title: "Wallet Account"),
     DrawerItemModel(image: Assets.imagesMyInvestments, title: "My Investments"),
   ];
-  static List<DrawerItemModel> endItems = [
+  static final List<DrawerItemModel> endItems = [
     DrawerItemModel(image: Assets.imagesSettings, title: "Setting system"),
     DrawerItemModel(image: Assets.imagesLogout, title: "Logout account"),
   ];
