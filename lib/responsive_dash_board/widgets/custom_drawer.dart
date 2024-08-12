@@ -22,19 +22,28 @@ class CustomDrawerDashBoard extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const ListTileInfoWidget(
-          image: Assets.imagesAvatar3,
-          title: 'Lekan Okeowo',
-          subTitle: 'demo@gmail.com',
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(
+          child: ListTileInfoWidget(
+            image: Assets.imagesAvatar3,
+            title: 'Lekan Okeowo',
+            subTitle: 'demo@gmail.com',
+          ),
         ),
-        verticalSpace(8),
+        SliverToBoxAdapter(child: verticalSpace(8)),
         ListViewDrawerItems(items: items),
-        const Spacer(),
-        InActiveTileListInfoWidget(drawerItemModel: endItems[0]),
-        InActiveTileListInfoWidget(drawerItemModel: endItems[1]),
-        verticalSpace(8),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            children: [
+              const Spacer(),
+              InActiveTileListInfoWidget(drawerItemModel: endItems[0]),
+              InActiveTileListInfoWidget(drawerItemModel: endItems[1]),
+            ],
+          ),
+        ),
+        SliverToBoxAdapter(child: verticalSpace(8)),
       ],
     );
   }
