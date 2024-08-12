@@ -8,7 +8,7 @@ class CustomDrawerDashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         ListTileInfoWidget(
           image: Assets.imagesAvatar3,

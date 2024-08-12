@@ -9,7 +9,7 @@ class DashBoardDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: CustomDrawerDashBoard(),
         ),
         Expanded(

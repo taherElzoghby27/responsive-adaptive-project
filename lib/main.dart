@@ -5,10 +5,11 @@ import 'responsive_text/screen_text.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() => runApp(
-      DevicePreview(
-        enabled: true,
-        builder: (context) => const MyApp(), // Wrap your app
-      ),
+      const MyApp(),
+      // DevicePreview(
+      //   enabled: true,
+      //   builder: (context) => const MyApp(), // Wrap your app
+      // ),
     );
 
 class MyApp extends StatelessWidget {
