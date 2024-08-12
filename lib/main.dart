@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'responsive_dash_board/responsive_dash_board_view.dart';
 import 'responsive_text/screen_text.dart';
 import 'package:device_preview/device_preview.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ResponsiveText(),
+      home: const ResponsiveDashBoardView(),
     );
   }
 }
