@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
 
-import '../utils/app_styles.dart';
 import 'container_background.dart';
+import 'expenses_component.dart';
 import 'expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
@@ -20,7 +20,17 @@ class AllExpenses extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    ExpensesHeader(),
+                    const ExpensesHeader(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        const ExpensesComponent(),
+                        horizontalSpace(8),
+                        const ExpensesComponent(),
+                        horizontalSpace(8),
+                        const ExpensesComponent(),
+                      ],
+                    ),
                   ],
                 ),
               ),
