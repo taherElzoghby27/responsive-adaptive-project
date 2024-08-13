@@ -22,29 +22,35 @@ class CustomDrawerDashBoard extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        const SliverToBoxAdapter(
-          child: ListTileInfoWidget(
-            image: Assets.imagesAvatar3,
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
-          ),
+    return Drawer(
+      backgroundColor: const Color(0xFFFFFFFF),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(
+              child: ListTileInfoWidget(
+                image: Assets.imagesAvatar3,
+                title: 'Lekan Okeowo',
+                subTitle: 'demo@gmail.com',
+              ),
+            ),
+            SliverToBoxAdapter(child: verticalSpace(8)),
+            ListViewDrawerItems(items: items),
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Column(
+                children: [
+                  const Spacer(),
+                  InActiveTileListInfoWidget(drawerItemModel: endItems[0]),
+                  InActiveTileListInfoWidget(drawerItemModel: endItems[1]),
+                ],
+              ),
+            ),
+            SliverToBoxAdapter(child: verticalSpace(8)),
+          ],
         ),
-        SliverToBoxAdapter(child: verticalSpace(8)),
-        ListViewDrawerItems(items: items),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              const Spacer(),
-              InActiveTileListInfoWidget(drawerItemModel: endItems[0]),
-              InActiveTileListInfoWidget(drawerItemModel: endItems[1]),
-            ],
-          ),
-        ),
-        SliverToBoxAdapter(child: verticalSpace(8)),
-      ],
+      ),
     );
   }
 }

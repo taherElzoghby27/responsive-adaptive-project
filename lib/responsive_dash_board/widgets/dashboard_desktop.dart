@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/spacing.dart';
+import 'all_expenses.dart';
 import 'custom_drawer.dart';
 
 class DashBoardDesktop extends StatelessWidget {
@@ -7,16 +9,18 @@ class DashBoardDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: CustomDrawerDashBoard(),
         ),
-        Expanded(
-          flex: 2,
-          child: SizedBox(),
+        horizontalSpace(32),
+        const Expanded(
+          flex: 3,
+          child: AllExpenses(),
         ),
-        Expanded(
+        horizontalSpace(32),
+        const Expanded(
           flex: 2,
           child: SizedBox(),
         ),
