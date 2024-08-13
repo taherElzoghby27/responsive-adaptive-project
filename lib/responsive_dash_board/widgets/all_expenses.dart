@@ -3,7 +3,7 @@ import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
 
 import '../utils/app_styles.dart';
 import 'container_background.dart';
-import 'range_option.dart';
+import 'expenses_header.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
@@ -20,7 +20,7 @@ class AllExpenses extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
                 child: Column(
                   children: [
-                    RangeOption(),
+                    ExpensesHeader(),
                   ],
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
 
 import '../utils/app_styles.dart';
+import '../utils/spacing.dart';
 import 'container_border.dart';
 
 class RangeOption extends StatelessWidget {
@@ -9,34 +9,25 @@ class RangeOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          'All Expenses',
-          style: AppStyles.styleSemiBold20(context),
-        ),
-        const Spacer(),
-        ContainerBorder(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text(
-                  'Monthly',
-                  style: AppStyles.styleMedium16(context),
-                ),
-                horizontalSpace(8),
-                Transform.rotate(
-                  angle: -1.57079633,
-                  child: const Icon(
-                    Icons.arrow_back_ios_new_outlined,
-                  ),
-                )
-              ],
+    return ContainerBorder(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: [
+            Text(
+              'Monthly',
+              style: AppStyles.styleMedium16(context),
             ),
-          ),
+            horizontalSpace(8),
+            Transform.rotate(
+              angle: -1.57079633,
+              child: const Icon(
+                Icons.arrow_back_ios_new_outlined,
+              ),
+            )
+          ],
         ),
-      ],
+      ),
     );
   }
 }
