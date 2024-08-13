@@ -13,13 +13,17 @@ class HeaderExpenseComponent extends StatelessWidget {
       children: [
         CircleAvatar(
           backgroundColor: const Color(0xFFFAFAFA),
-          child: SvgPicture.asset(image),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SvgPicture.asset(image),
+          ),
         ),
         const Spacer(),
         Transform.rotate(
           angle: -1.57079633 * 2,
           child: const Icon(
             Icons.arrow_back_ios_new_outlined,
+            color: Color(0xFF064061),
           ),
         ),
       ],
