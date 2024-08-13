@@ -12,16 +12,17 @@ class DashBoardDesktop extends StatelessWidget {
     return Row(
       children: [
         const Expanded(
+          flex: 2,
           child: CustomDrawerDashBoard(),
         ),
         horizontalSpace(32),
         const Expanded(
-          flex: 3,
+          flex: 4,
           child: AllExpenses(),
         ),
         horizontalSpace(32),
         const Expanded(
-          flex: 2,
+          flex: 3,
           child: SizedBox(),
         ),
       ],

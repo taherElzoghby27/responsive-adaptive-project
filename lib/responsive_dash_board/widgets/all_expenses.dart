@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
 
+import '../utils/app_styles.dart';
+import 'container_background.dart';
+import 'range_option.dart';
+
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
 
@@ -11,21 +15,22 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
-                borderRadius: BorderRadius.circular(12),
+            child: ContainerBackground(
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    RangeOption(),
+                  ],
+                ),
               ),
             ),
           ),
           verticalSpace(30),
-          Expanded(
+          const Expanded(
             flex: 2,
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color(0xFFFFFFFF),
-                borderRadius: BorderRadius.circular(12),
-              ),
+            child: ContainerBackground(
+              child: Column(),
             ),
           ),
         ],
