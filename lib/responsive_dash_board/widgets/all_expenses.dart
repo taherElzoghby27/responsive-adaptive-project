@@ -17,10 +17,10 @@ class AllExpenses extends StatelessWidget {
             child: AllExpensesBody(),
           ),
           SliverToBoxAdapter(
-            child: verticalSpace(30),
+            child: verticalSpace(24),
           ),
           const SliverFillRemaining(
-            hasScrollBody: false,
+            // hasScrollBody: false,
             child: ContainerBackground(
               child: Column(
                 children: [],

@@ -27,7 +27,7 @@ class ExpensesComponent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               HeaderExpenseComponent(image: expenseItemModel.image),
-              verticalSpace(25),
+              verticalSpace(34),
               Text(
                 expenseItemModel.title,
                 style: AppStyles.styleSemiBold16(context),
@@ -37,7 +37,7 @@ class ExpensesComponent extends StatelessWidget {
                 expenseItemModel.date,
                 style: AppStyles.styleRegular14(context),
               ),
-              verticalSpace(10),
+              verticalSpace(16),
               Text(
                 expenseItemModel.price,
                 style: AppStyles.styleSemiBold24(context),
