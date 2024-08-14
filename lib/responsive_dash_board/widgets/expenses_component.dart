@@ -14,36 +14,30 @@ class ExpensesComponent extends StatelessWidget {
   final ExpenseItemModel expenseItemModel;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 4,
-        horizontal: 8,
-      ),
-      child: ContainerBorder(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              HeaderExpenseComponent(image: expenseItemModel.image),
-              verticalSpace(34),
-              Text(
-                expenseItemModel.title,
-                style: AppStyles.styleSemiBold16(context),
-              ),
-              verticalSpace(8),
-              Text(
-                expenseItemModel.date,
-                style: AppStyles.styleRegular14(context),
-              ),
-              verticalSpace(16),
-              Text(
-                expenseItemModel.price,
-                style: AppStyles.styleSemiBold24(context),
-              ),
-            ],
-          ),
+    return ContainerBorder(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            HeaderExpenseComponent(image: expenseItemModel.image),
+            verticalSpace(34),
+            Text(
+              expenseItemModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
+            verticalSpace(8),
+            Text(
+              expenseItemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
+            verticalSpace(16),
+            Text(
+              expenseItemModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
+          ],
         ),
       ),
     );

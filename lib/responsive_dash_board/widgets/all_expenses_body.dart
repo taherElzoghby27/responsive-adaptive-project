@@ -4,8 +4,8 @@ import 'package:responsive_adaptive/responsive_dash_board/utils/app_assets.dart'
 import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
 
 import 'container_background.dart';
-import 'expenses_component.dart';
 import 'expenses_header.dart';
+import 'row_items.dart';
 
 class AllExpensesBody extends StatelessWidget {
   const AllExpensesBody({super.key});
@@ -38,22 +38,7 @@ class AllExpensesBody extends StatelessWidget {
           children: [
             const ExpensesHeader(),
             verticalSpace(6),
-            Row(
-              children: expenses
-                  .map(
-                    (item) => Expanded(
-                      child: ExpensesComponent(
-                        expenseItemModel: ExpenseItemModel(
-                          image: item.image,
-                          title: item.title,
-                          date: item.date,
-                          price: item.price,
-                        ),
-                      ),
-                    ),
-                  )
-                  .toList(),
-            ),
+            RowItems(expenses: expenses),
           ],
         ),
       ),
