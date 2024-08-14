@@ -6,24 +6,24 @@ class HeaderExpenseComponent extends StatelessWidget {
     super.key,
     required this.image,
     this.color,
-    this.background,
+    this.backgroundColor,
   });
   final String image;
   final Color? color;
-  final Color? background;
+  final Color? backgroundColor;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         CircleAvatar(
-          backgroundColor: color ?? const Color(0xFFFAFAFA),
+          backgroundColor: backgroundColor ?? const Color(0xFFFAFAFA),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               image,
               colorFilter: ColorFilter.mode(
                 color ?? const Color(0xFF4EB7F2),
-                BlendMode.color,
+                BlendMode.srcIn,
               ),
             ),
           ),

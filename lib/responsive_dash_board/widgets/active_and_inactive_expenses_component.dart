@@ -63,7 +63,7 @@ class ActiveExpensesComponent extends StatelessWidget {
             HeaderExpenseComponent(
               image: expenseItemModel.image,
               color: const Color(0xFFFFFFFF),
-              background: const Color(0xFF60BEF3),
+              backgroundColor: const Color(0xFF60BEF3),
             ),
             verticalSpace(34),
             Text(
