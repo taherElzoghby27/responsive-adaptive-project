@@ -29,9 +29,9 @@ class RowItems extends StatelessWidget {
                     ),
                   ),
                 )
-              : Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Expanded(
+              : Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
                     child: ExpensesComponent(
                       expenseItemModel: ExpenseItemModel(
                         image: item.image,
