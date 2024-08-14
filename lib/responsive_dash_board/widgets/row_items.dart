@@ -28,23 +28,7 @@ class _RowItemsState extends State<RowItems> {
               ? Expanded(
                   child: InkWell(
                     onTap: () => updateSelectedIndex(index),
-                    child: selectedIndex == index
-                        ? ActiveExpensesComponent(
-                            expenseItemModel: ExpenseItemModel(
-                              image: item.image,
-                              title: item.title,
-                              date: item.date,
-                              price: item.price,
-                            ),
-                          )
-                        : InActiveExpensesComponent(
-                            expenseItemModel: ExpenseItemModel(
-                              image: item.image,
-                              title: item.title,
-                              date: item.date,
-                              price: item.price,
-                            ),
-                          ),
+                    child: activeOrInActive(index, item),
                   ),
                 )
               : Expanded(
@@ -52,29 +36,33 @@ class _RowItemsState extends State<RowItems> {
                     padding: const EdgeInsets.all(10),
                     child: InkWell(
                       onTap: () => updateSelectedIndex(index),
-                      child: selectedIndex == index
-                          ? ActiveExpensesComponent(
-                              expenseItemModel: ExpenseItemModel(
-                                image: item.image,
-                                title: item.title,
-                                date: item.date,
-                                price: item.price,
-                              ),
-                            )
-                          : InActiveExpensesComponent(
-                              expenseItemModel: ExpenseItemModel(
-                                image: item.image,
-                                title: item.title,
-                                date: item.date,
-                                price: item.price,
-                              ),
-                            ),
+                      child: activeOrInActive(index, item),
                     ),
                   ),
                 );
         },
       ).toList(),
     );
+  }
+
+  StatelessWidget activeOrInActive(int index, ExpenseItemModel item) {
+    return selectedIndex == index
+        ? ActiveExpensesComponent(
+            expenseItemModel: ExpenseItemModel(
+              image: item.image,
+              title: item.title,
+              date: item.date,
+              price: item.price,
+            ),
+          )
+        : InActiveExpensesComponent(
+            expenseItemModel: ExpenseItemModel(
+              image: item.image,
+              title: item.title,
+              date: item.date,
+              price: item.price,
+            ),
+          );
   }
 
   void updateSelectedIndex(int index) {
