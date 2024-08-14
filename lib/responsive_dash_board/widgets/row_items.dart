@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/responsive_dash_board/models/expense_item_model.dart';
 
-import 'expenses_component.dart';
+import 'active_and_inactive_expenses_component.dart';
 
 class RowItems extends StatelessWidget {
   const RowItems({
@@ -20,7 +20,7 @@ class RowItems extends StatelessWidget {
           ExpenseItemModel item = e.value;
           return index == 0 || index == expenses.length - 1
               ? Expanded(
-                  child: ExpensesComponent(
+                  child: InActiveExpensesComponent(
                     expenseItemModel: ExpenseItemModel(
                       image: item.image,
                       title: item.title,
@@ -32,7 +32,7 @@ class RowItems extends StatelessWidget {
               : Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(10),
-                    child: ExpensesComponent(
+                    child: InActiveExpensesComponent(
                       expenseItemModel: ExpenseItemModel(
                         image: item.image,
                         title: item.title,
