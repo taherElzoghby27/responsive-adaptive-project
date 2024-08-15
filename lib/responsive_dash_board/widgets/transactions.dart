@@ -13,20 +13,20 @@ class Transactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => IntrinsicWidth(
-          child: ListTileInfoWidget(
-            image: items[index].image,
-            title: items[index].title,
-            subTitle: items[index].subTitle,
-          ),
-        ),
-        itemCount: items.length,
-      ),
-    );
+    // return SizedBox(
+    //   height: 80,
+    //   child: ListView.builder(
+    //     scrollDirection: Axis.horizontal,
+    //     itemBuilder: (context, index) => IntrinsicWidth(
+    //       child: ListTileInfoWidget(
+    //         image: items[index].image,
+    //         title: items[index].title,
+    //         subTitle: items[index].subTitle,
+    //       ),
+    //     ),
+    //     itemCount: items.length,
+    //   ),
+    // );
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
