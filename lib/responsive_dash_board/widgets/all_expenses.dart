@@ -12,18 +12,12 @@ class AllExpenses extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 20),
-      child: CustomScrollView(
-        slivers: [
-          const SliverToBoxAdapter(
-            child: AllExpensesBody(),
-          ),
-          SliverToBoxAdapter(
-            child: verticalSpace(24),
-          ),
-          const SliverFillRemaining(
-            child: ContainerBackground(
-              child: QuickInvoice(),
-            ),
+      child: Column(
+        children: [
+          const AllExpensesBody(),
+          verticalSpace(24),
+          const ContainerBackground(
+            child: QuickInvoice(),
           ),
         ],
       ),
