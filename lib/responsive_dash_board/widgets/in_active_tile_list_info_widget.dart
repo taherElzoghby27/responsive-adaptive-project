@@ -18,7 +18,7 @@ class InActiveTileListInfoWidget extends StatelessWidget {
         leading: SvgPicture.asset(drawerItemModel.image),
         title: Text(
           drawerItemModel.title,
-          style: AppStyles.styleRegular16(context),
+          style: AppStyles.styleMedium16(context),
         ),
       ),
     );
