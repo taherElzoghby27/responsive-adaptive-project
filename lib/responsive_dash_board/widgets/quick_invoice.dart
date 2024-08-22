@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive/responsive_dash_board/utils/spacing.dart';
+import 'button_voice_section.dart';
 import 'latest_transaction.dart';
 import 'quick_invoice_fields.dart';
 import 'quick_invoice_header.dart';
@@ -10,7 +11,7 @@ class QuickInvoice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(18),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -23,6 +24,8 @@ class QuickInvoice extends StatelessWidget {
             indent: 12,
           ),
           const QuickInvoiceFields(),
+          verticalSpace(18),
+          const ButtonInvoiceSection(),
         ],
       ),
     );
