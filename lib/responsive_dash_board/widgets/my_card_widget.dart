@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import '../utils/app_assets.dart';
 import '../utils/app_styles.dart';
 import '../utils/spacing.dart';
-import 'content_card.dart';
+import 'all_card.dart';
 
 class MyCardWidget extends StatelessWidget {
   const MyCardWidget({super.key});
@@ -19,19 +18,7 @@ class MyCardWidget extends StatelessWidget {
           ),
         ),
         verticalSpace(15),
-        AspectRatio(
-          aspectRatio: 420 / 215,
-          child: Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFF49ACE3),
-              borderRadius: BorderRadius.circular(12),
-              image: const DecorationImage(
-                image: AssetImage(Assets.imagesMaskgroup),
-              ),
-            ),
-            child: const ContentCard(),
-          ),
-        ),
+        const AllCardWidget(),
       ],
     );
   }
