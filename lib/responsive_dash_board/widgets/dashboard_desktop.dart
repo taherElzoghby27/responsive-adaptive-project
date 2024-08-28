@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/spacing.dart';
 import 'all_expenses.dart';
 import 'custom_drawer.dart';
+import 'my_card_transactions_income.dart';
 
 class DashBoardDesktop extends StatelessWidget {
   const DashBoardDesktop({super.key});
@@ -23,7 +24,7 @@ class DashBoardDesktop extends StatelessWidget {
         horizontalSpace(32),
         const Expanded(
           flex: 3,
-          child: SizedBox(),
+          child: MyCardTransactionsIncome(),
         ),
       ],
     );
