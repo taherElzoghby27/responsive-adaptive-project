@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
 import 'responsive_dash_board/responsive_dash_board_view.dart';
-import 'responsive_text/screen_text.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() => runApp(
-      const MyApp(),
-      // DevicePreview(
-      //   enabled: true,
-      //   builder: (context) => const MyApp(), // Wrap your app
-      // ),
+      DevicePreview(
+        enabled: false,
+        builder: (context) => const MyApp(),
+      ),
     );
 
 class MyApp extends StatelessWidget {

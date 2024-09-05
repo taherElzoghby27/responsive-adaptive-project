@@ -13,7 +13,9 @@ class _ChartSectionState extends State<ChartSection> {
   int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return PieChart(getChartData());
+    return PieChart(
+      getChartData(),
+    );
   }
 
   PieChartData getChartData() {
