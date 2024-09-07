@@ -49,7 +49,7 @@ class ContentCard extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          verticalSpace(12),
+          const Spacer(),
           Text(
             "12/20 - 124",
             style: AppStyles.styleRegular16(context).copyWith(
