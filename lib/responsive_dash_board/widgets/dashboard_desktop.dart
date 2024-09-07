@@ -17,14 +17,28 @@ class DashBoardDesktop extends StatelessWidget {
           child: CustomDrawerDashBoard(),
         ),
         horizontalSpace(32),
-        const Expanded(
-          flex: 4,
-          child: AllExpenses(),
-        ),
-        horizontalSpace(32),
-        const Expanded(
-          flex: 3,
-          child: MyCardTransactionsIncome(),
+        Expanded(
+          flex: 7,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    const Expanded(
+                      flex: 4,
+                      child: AllExpenses(),
+                    ),
+                    horizontalSpace(32),
+                    const Expanded(
+                      flex: 3,
+                      child: MyCardTransactionsIncome(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );

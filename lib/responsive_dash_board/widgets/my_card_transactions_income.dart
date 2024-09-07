@@ -19,7 +19,7 @@ class MyCardTransactionsIncome extends StatelessWidget {
       child: Column(
         children: [
           const Expanded(
-            flex: 7,
+            flex: 2,
             child: ContainerBackground(
               child: Padding(
                 padding: EdgeInsets.symmetric(
@@ -34,9 +34,7 @@ class MyCardTransactionsIncome extends StatelessWidget {
                       height: 40,
                       color: Color(0xFFF1F1F1),
                     ),
-                    Expanded(
-                      child: MyTransactionHistoryWidget(),
-                    ),
+                    MyTransactionHistoryWidget(),
                   ],
                 ),
               ),
@@ -44,7 +42,7 @@ class MyCardTransactionsIncome extends StatelessWidget {
           ),
           verticalSpace(15),
           const Expanded(
-            flex: 3,
+            flex: 1,
             child: IncomeSection(),
           ),
           verticalSpace(15),

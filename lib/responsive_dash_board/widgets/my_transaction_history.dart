@@ -32,9 +32,7 @@ class MyTransactionHistoryWidget extends StatelessWidget {
           ],
         ),
         verticalSpace(30),
-        const Expanded(
-          child: TransactionListView(),
-        ),
+        const TransactionListView(),
       ],
     );
   }

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../models/chart_model.dart';
-import '../utils/size_config.dart';
 import 'chart_section.dart';
-import 'detailed_income_chart.dart';
 import 'income_data.dart';
 
 class IncomeSectionData extends StatelessWidget {
@@ -33,30 +30,19 @@ class IncomeSectionData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.sizeOf(context).width;
-    return width >= SizeConfig.desktop && width < 1750
-        ? const Expanded(
-            child: Padding(
-            padding: EdgeInsets.all(10),
-            child: DetailedIncomeChart(),
-          ))
-        : Row(
-            children: [
-              Expanded(
-                child: AspectRatio(
-                  aspectRatio: 1,
-                  child: ChartSection(
-                    chartsData: chartsData,
-                  ),
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                child: IncomeData(
-                  chartsData: chartsData,
-                ),
-              ),
-            ],
-          );
+    return Row(
+      children: [
+        Expanded(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: ChartSection(chartsData: chartsData),
+          ),
+        ),
+        Expanded(
+          flex: 3,
+          child: IncomeData(chartsData: chartsData),
+        ),
+      ],
+    );
   }
 }
